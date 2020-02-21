@@ -46,8 +46,8 @@ blah, blah, blah, blah
         }
 //This function uses the anemia and hypothyroidism counts and divides by 6 to find the probability that the user has anemia or hypothyroidism. The results will be shown through the innerHTML command. The code will know to express our results when it sees id="results" because we told it to recognize "results".
 	function ResultPercentage(){
-		var anemiaPercent = anemia_count + "/4";
-		var hypoPercent = hypo_count + "/4";
+		var anemiaPercent = (anemia_count + "/4")*100;
+		var hypoPercent = (hypo_count + "/4")*100;
 		var resultText= document.getElementById("results");
 		resultText.innerHTML = "Probability it is anemia = " + anemiaPercent + "<br> Probability it is hypothyroidism = " + hypoPercent; 
 	}
