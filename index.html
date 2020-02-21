@@ -6,8 +6,8 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
 Authors in chronological order of contribution:
-Author 1
-Author 2
+Tim Riedel
+Anna Mududmala
  
 Further Information:
 http://diystream.cns.utexas.edu/
@@ -22,10 +22,201 @@ blah, blah, blah,
 Known Issues:
 blah, blah, blah, blah
 -->
-
+	
    <head> 
-      
-	   PUT YOUR OLD CODE IN HERE
+      <title>Hello World</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+<!--This part is in JavaScript. JavaSript is affected by an event and then changes another part of our website.-->
+  <script>
+//These have the initial allergy and cold counts as 0.
+        var allergy_count = 0;
+        var cold_count = 0; 
+
+//The first two functions add 1 to our allergy and cold counts.
+        function allergyAdd(){
+            anemia_count = anemia_count + 1;
+        }
+
+        function coldAdd(){
+            hypo_count = hypo_count + 1;
+        }
+//This function uses the anemia and hypothyroidism counts and divides by 6 to find the probability that the user has anemia or hypothyroidism. The results will be shown through the innerHTML command. The code will know to express our results when it sees id="results" because we told it to recognize "results".
+	function ResultPercentage(){
+		var anemiaPercent = anemia_count + "/6";
+		var hypoPercent = hypo_count + "/6";
+		var resultText= document.getElementById("results");
+		resultText.innerHTML = "Probability it is anemia = " + anemiaPercent + "<br> Probability it is hypothyroidism = " + hypoPercent; 
+	}
+	
+
+  </script>
+
+
+<!--This is CSS. It sets up the formatting for our pages.-->
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+<!--The stuff below the body tag will actually be in our website.-->
+<body>
+<!--The header is formatted with the class type. Using h1 tags gives us our header text.-->
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Hypothyroidism or Anemia?</h1>
+</div>
+<!--We have to put the div tags to seperate different parts of our page.-->	
+<div id="content" class="w3-container">
+<!--P tags code for what is in a paragraph.-->
+	<p>Are you feeling like you might have hypothyroidism but wonder if it is anemia. Answer a few short questions to find out!</p>
+<!--This is a button. When clicked it sends us to page one. It is formatted with the class.-->
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	<!--These p terms show plain text.-->
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+</div>
+<!--This is page one.-->
+<div class="page" id="one">
+	<!--This is a header reading "Question 1".-->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+	<!--This is question 1 and buttons to answer the question.-->
+    	<div id="content" class="w3-container">
+        <p>Are you sensitive to the cold?</p>    
+ <!-- These are the buttons to answer question one. Both buttons lead to question two. Each one adds to the anemia or hypo count. The onclick term is connected to one of the functions from earlier. Clicking a button will increase either the anemia or hypothyroidism probability.-->
+	<a href="#two" onclick="hypoAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#two" onclick="anemiaAdd();" class="w3-btn w3-black"> No </a>
+	</div>
+</div>
+<!--This is page two.-->
+<div class="page" id="two">
+	<!--This is a new header.-->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+	</div>
+	<!--This is question 2 and its buttons.-->
+	<div id="content" class="w3-container">
+		<p>Do you get pale or yellowish skin?</p>
+	 <!--These buttons answer question two. They send the user to page three. Each will add to either the anemia or hypothyroidism count.-->
+	<a href="#three" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#three" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	</div>
+</div>
+	
+<!--This is page three.-->
+<div class="page" id="three">
+	<!--Here's our new header.-->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	<!--This is question three.-->
+	<div id="content" class="w3-container">
+		<p>Are you experiencing unexpected weight gain?</p>
+	<!--These buttons answer question three. They add to the anemia or hypothyroidism count. They lead to the next page.-->
+	<a href="#four" onclick="hypoAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#four" onclick="anemiaAdd();" class="w3-btn w3-black"> No </a>
+	</div>
+</div>
+
+<!--This is page four.-->
+<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<!--The header will say "Question 4".-->
+		<h1>Question 4</h1>
+	</div>
+	<!--This is the fourth question.-->
+	<div id="content" class="w3-container">
+		<p>Do you have a high heart rate?</p>
+	<!--These buttons answer question four and lead to page 5. They code for an addition to either the anemia or hypo counts-->
+	<a href="#five" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#five" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	</div>
+</div>
+<!--This is page five.-->	
+<div class="page" id="five">
+     	<div class="w3-container w3-flat-carrot">
+		<!--This is the header for page five.-->
+		<h1>Question 5</h1>
+	</div>
+	<!--This is the question the user answers.-->
+	<div id="content" class="w3-container">
+		<p>Are you wheezing?</p>
+	<!--These buttons continue to add to the anemia or hypothyroidism counts and lead to the next page.-->
+	<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#six" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+	</div>
+</div>
+		
+<!--This is page six.-->		
+<div class="page" id="six">
+     	<div class="w3-container w3-flat-carrot">
+		<!--This header will say "Question 6".-->
+		<h1>Question 6</h1>
+	</div>
+	<!--This is the sixth and last question.-->
+	<div id="content" class="w3-container">
+		<p>Do you have chills?</p>
+	<!--The buttons lead to page seven and are the last addition to either the anemia or hypothyroidism sums.-->
+	<a href="#seven" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#seven" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+	</div>
+</div>
+		
+<!--This is page seven.-->	
+<div class="page" id="seven">
+     	<div class="w3-container w3-flat-carrot">
+		<!--This header tells the user they are almost done.-->
+		<h1>Almost there</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+		<p>You're almost done!</p>
+	<!--This button's function is to calculate the probability of a hypothyroidism or anemia. It will lead the user to the eighth and final page.-->
+	<a href="#eight" onclick="ResultPercentage();" class="w3-btn w3-black">Click here to view your results.</a>
+	</div>
+</div>
+<!--This is the results page!-->
+<div class="page" id="eight">
+     	<div class="w3-container w3-flat-carrot">
+		<!--This header shows the results.-->
+		<h1>Your results</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+		<!--This triggers our innerHTML command from earlier. The sums of anemia and hypothyroidism symptoms will be divided by six to calculate the probability that the user has one of those disorders.-->
+		<p id="results">
+		</p>
+	</div>
+</div>
+		
+<!--This footer is on every page. It uses the pre-made class.-->
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+</body>
+</html>
 	   
    </body>
 </html>
