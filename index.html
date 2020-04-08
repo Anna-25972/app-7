@@ -30,6 +30,10 @@ This is to help the user learn if they have COVID-19, a cold, the flu, or allerg
    </head> 
 <!--This part is in JavaScript. JavaSript is affected by an event and then changes another part of our website.-->
   <script>
+var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+
 //These have the initial COVID-19, cold, flu, and allergy counts set to 0.
         var covid_count = 0;
         var cold_count = 0; 
