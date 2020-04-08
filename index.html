@@ -95,16 +95,14 @@ This is to help the user learn if they have COVID-19, a cold, the flu, or allerg
 <body>
 <!--The header is formatted with the class type. Using h1 tags gives us our header text.-->
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Hypothyroidism or Anemia?</h1>
+	<h1>COVID-19, Cold, Flu, or Allergies?</h1>
 </div>
 <!--We have to put the div tags to seperate different parts of our page.-->	
 <div id="content" class="w3-container">
 <!--P tags code for what is in a paragraph.-->
-	<p>Are you tired all the time and think you may have anemia or a thyroid problem? Answer a few short questions to help find out!</p>
+	<p>Are you worried you have the coronavirus? Answer a few short questions to help find out.</p>
 <!--This is a button. When clicked it sends us to page one. It is formatted with the class.-->
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
-	<!-- This is my photo. It has center tags around it so it's centered. -->
-	<center><img src="https://images.everydayhealth.com/images/diabetes/type-2-diabetes/why-does-diabetes-make-me-so-tired-1440x810.jpg?w=1110" alt="tired"></center>
 	<!--These p terms show plain text.-->
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -118,7 +116,7 @@ This is to help the user learn if they have COVID-19, a cold, the flu, or allerg
 	</div>
 	<!--This is question 1 and buttons to answer the question.-->
     	<div id="content" class="w3-container">
-        <p>Are you sensitive to the cold?</p>    
+        <p>Are you coughing?</p>    
  <!-- These are the buttons to answer question one. Both buttons lead to question two. Each one adds to the anemia or hypo count. The onclick term is connected to one of the functions from earlier. Clicking a button will increase either the anemia or hypothyroidism probability.-->
 	<a href="#two" onclick="hypoAdd();" class="w3-btn w3-black"> Yes </a>
 	<a href="#two" onclick="anemiaAdd();" class="w3-btn w3-black"> No </a>
@@ -132,7 +130,7 @@ This is to help the user learn if they have COVID-19, a cold, the flu, or allerg
 	</div>
 	<!--This is question 2 and its buttons.-->
 	<div id="content" class="w3-container">
-		<p>Do you get pale or yellowish skin?</p>
+		<p>Are you experiencing shortness of breath?</p>
 	 <!--These buttons answer question two. They send the user to page three. Each will add to either the anemia or hypothyroidism count.-->
 	<a href="#three" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
 	<a href="#three" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
@@ -147,8 +145,8 @@ This is to help the user learn if they have COVID-19, a cold, the flu, or allerg
 	</div>
 	<!--This is question three.-->
 	<div id="content" class="w3-container">
-		<p>Are you experiencing unexpected weight gain?</p>
-	<!--These buttons answer question three. They add to the anemia or hypothyroidism count. They lead to the next page.-->
+		<p>Are you sneezing?</p>
+	<!--These buttons answer question three. They add to an illness count. They lead to the next page.-->
 	<a href="#four" onclick="hypoAdd();" class="w3-btn w3-black"> Yes </a>
 	<a href="#four" onclick="anemiaAdd();" class="w3-btn w3-black"> No </a>
 	</div>
@@ -162,15 +160,105 @@ This is to help the user learn if they have COVID-19, a cold, the flu, or allerg
 	</div>
 	<!--This is the fourth question.-->
 	<div id="content" class="w3-container">
-		<p>Do you have a high heart rate?</p>
-	<!--These buttons answer question four and lead to page 5. They code for an addition to either the anemia or hypo counts-->
+		<p>Do you have a runny or stuffy nose?</p>
+	<!--These buttons answer question four and lead to page 5. They code for an addition to an illness count--->
 	<a href="#five" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
 	<a href="#five" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
-		
-<!--This is page five.-->	
+
+<!--This is page five.-->
 <div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<!--The header will say "Question 4".-->
+		<h1>Question 5</h1>
+	</div>
+	<!--This is the fifth question.-->
+	<div id="content" class="w3-container">
+		<p>Do you have a sore throat?</p>
+	<!--These buttons answer question five and lead to page 6. They code for an addition to an illness count--->
+	<a href="#six" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#six" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	</div>
+</div>
+	
+<!--This is page six.-->
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<!--The header will say "Question 6".-->
+		<h1>Question 6</h1>
+	</div>
+	<!--This is the sixth question.-->
+	<div id="content" class="w3-container">
+		<p>Do you have a fever?</p>
+	<!--These buttons answer question six and lead to page 7. They code for an addition to an illness count-->
+	<a href="#seven" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#seven" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	</div>
+</div>
+	
+<!--This is page seven.-->
+<div class="page" id="seven">
+	<div class="w3-container w3-flat-carrot">
+		<!--The header will say "Question 7".-->
+		<h1>Question 7</h1>
+	</div>
+	<!--This is the seventh question.-->
+	<div id="content" class="w3-container">
+		<p>Do you feel tired and weak?</p>
+	<!--These buttons answer question seven and lead to page 8. They code for an addition to an illness count-->
+	<a href="#eight" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#eight" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	</div>
+</div>
+	
+<!--This is page eight.-->
+<div class="page" id="eight">
+	<div class="w3-container w3-flat-carrot">
+		<!--The header will say "Question 8".-->
+		<h1>Question 8</h1>
+	</div>
+	<!--This is the eighth question.-->
+	<div id="content" class="w3-container">
+		<p>Do you get headaches?</p>
+	<!--These buttons answer question 8 and lead to page 9. They code for an addition to an illness count-->
+	<a href="#nine" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#nine" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	</div>
+</div>
+	
+<!--This is page nine.-->
+<div class="page" id="nine">
+	<div class="w3-container w3-flat-carrot">
+		<!--The header will say "Question 9".-->
+		<h1>Question 9</h1>
+	</div>
+	<!--This is the ninth question.-->
+	<div id="content" class="w3-container">
+		<p>Do you get body aches and pains?</p>
+	<!--These buttons answer question 9 and lead to page 10. They code for an addition to an illness count-->
+	<a href="#ten" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#ten" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	</div>
+</div>
+	
+	<!--This is page ten.-->
+<div class="page" id="ten">
+	<div class="w3-container w3-flat-carrot">
+		<!--The header will say "Question 10".-->
+		<h1>Question 10</h1>
+	</div>
+	<!--This is the tenth question.-->
+	<div id="content" class="w3-container">
+		<p>Do you have diarrhea?</p>
+	<!--These buttons answer question 10 and lead to page 11. They code for an addition to an illness count-->
+	<a href="#eleven" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#eleven" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	</div>
+</div>
+		
+<!--This is page eleven.-->	
+<div class="page" id="eleven">
      	<div class="w3-container w3-flat-carrot">
 		<!--This header tells the user they are almost done.-->
 		<h1>Almost there</h1>
@@ -179,11 +267,11 @@ This is to help the user learn if they have COVID-19, a cold, the flu, or allerg
 	<div id="content" class="w3-container">
 		<p>You're almost done!</p>
 	<!--This button's function is to calculate the probability of a hypothyroidism or anemia. It will lead the user to the eighth and final page.-->
-	<a href="#six" onclick="ResultPercentage();" class="w3-btn w3-black">Click here to view your results.</a>
+	<a href="#twelve" onclick="ResultPercentage();" class="w3-btn w3-black">Click here to view your results.</a>
 	</div>
 </div>
 <!--This is the results page!-->
-<div class="page" id="six">
+<div class="page" id="twelve">
      	<div class="w3-container w3-flat-carrot">
 		<!--This header shows the results.-->
 		<h1>Your results</h1>
