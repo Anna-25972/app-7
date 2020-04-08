@@ -122,8 +122,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
     	<div id="content" class="w3-container">
         <p>Are you coughing?</p>    
  <!-- These are the buttons to answer question one. Both buttons lead to question two. Each one adds to the anemia or hypo count. The onclick term is connected to one of the functions from earlier. Clicking a button will increase either the anemia or hypothyroidism probability.-->
-	<a href="#two" onclick="hypoAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#two" onclick="anemiaAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#two" onclick="covidAdd();" onclick="coldAdd();" onclick="fluAdd();"class="w3-btn w3-black"> Yes </a>
+	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 <!--This is page two.-->
@@ -136,8 +136,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<div id="content" class="w3-container">
 		<p>Are you experiencing shortness of breath?</p>
 	 <!--These buttons answer question two. They send the user to page three. Each will add to either the anemia or hypothyroidism count.-->
-	<a href="#three" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#three" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#three" onclick="covidAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#three" onclick="coldAdd();" onclick="fluAdd();" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 	
@@ -151,8 +151,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<div id="content" class="w3-container">
 		<p>Are you sneezing?</p>
 	<!--These buttons answer question three. They add to an illness count. They lead to the next page.-->
-	<a href="#four" onclick="hypoAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#four" onclick="anemiaAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#four" onclick="coldAdd();" onclick="allergy Add();" class="w3-btn w3-black"> Yes </a>
+	<a href="#four" onclick="covidAdd();" onclick="fluAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 
@@ -166,8 +166,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<div id="content" class="w3-container">
 		<p>Do you have a runny or stuffy nose?</p>
 	<!--These buttons answer question four and lead to page 5. They code for an addition to an illness count--->
-	<a href="#five" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#five" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#five" onclick="coldAdd();" onclick="allergy Add();" class="w3-btn w3-black"> Yes </a>
+	<a href="#five" onclick="covidAdd();" onclick="fluAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 
@@ -181,8 +181,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
 	<!--These buttons answer question five and lead to page 6. They code for an addition to an illness count--->
-	<a href="#six" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#six" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#six" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#six" onclick="covidAdd();" onclick="fluAdd();" onclick="allergy Add();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 	
@@ -196,8 +196,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p>
 	<!--These buttons answer question six and lead to page 7. They code for an addition to an illness count-->
-	<a href="#seven" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#seven" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#seven" onclick="coldAdd();" onclick="covidAdd();" onclick="fluAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#seven" onclick="allergy Add();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 	
@@ -211,8 +211,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<div id="content" class="w3-container">
 		<p>Do you feel tired and weak?</p>
 	<!--These buttons answer question seven and lead to page 8. They code for an addition to an illness count-->
-	<a href="#eight" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#eight" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#eight" onclick="fluAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#eight" onclick="allergy Add();" onclick="coldAdd();" onclick="covidAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 	
@@ -226,8 +226,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<div id="content" class="w3-container">
 		<p>Do you get headaches?</p>
 	<!--These buttons answer question 8 and lead to page 9. They code for an addition to an illness count-->
-	<a href="#nine" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#nine" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#nine" onclick="fluAdd();" onclick="allergy Add();" onclick="covidAdd();"class="w3-btn w3-black"> Yes </a>
+	<a href="#nine" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 	
@@ -241,8 +241,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<div id="content" class="w3-container">
 		<p>Do you get body aches and pains?</p>
 	<!--These buttons answer question 9 and lead to page 10. They code for an addition to an illness count-->
-	<a href="#ten" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#ten" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#ten" onclick="covidAdd();" onclick="coldAdd();" onclick="fluAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#ten" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 	
@@ -256,8 +256,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<div id="content" class="w3-container">
 		<p>Do you have diarrhea?</p>
 	<!--These buttons answer question 10 and lead to page 11. They code for an addition to an illness count-->
-	<a href="#eleven" onclick="anemiaAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#eleven" onclick="hypoAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#eleven" onclick="covidAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#eleven" onclick="coldAdd();" onclick="fluAdd();" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>
 		
@@ -270,7 +270,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 	<div id="content" class="w3-container">
 		<p>You're almost done!</p>
-	<!--This button's function is to calculate the probability of a hypothyroidism or anemia. It will lead the user to the eighth and final page.-->
+	<!--This button's function is to calculate the probability of each illness. It will lead the user to the twelth and final page.-->
 	<a href="#twelve" onclick="ResultPercentage();" class="w3-btn w3-black">Click here to view your results.</a>
 	</div>
 </div>
