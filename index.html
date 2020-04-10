@@ -54,29 +54,21 @@ console.log("This file last modified " + docMod); // generates message in javaSc
             allergy_count = allergy_count + 1;
         }
 //results function
-	  function ResultArray() {
-		  var covidPercent = covid_count /10 * 100;
-		  var coldPercent = cold_count /10 * 100;
-		  var fluPercent = flu_count /10 * 100;
-		  var allergyPercent = allergy_count /10 * 100;
-		  var allData = [covidPercent, coldPercent, fluPercent, allergyPercent];
-		  console.log(allData);
-		  var resultText = document.getElementById('results');
-		  resultText.innerHTML = "Probability is it COVID-19 = " + covidPercent + "<br> Probability it is a cold = " +coldPercent + "<br> Probability it is the flu = " +fluPercent + "<br> Probability it is allergies = " + allergyPercent;
-	  };
-//This function will draw rectangles on my canvas.
-	  function drawRectangles(){
+	function ResultArray() {
 		var covidPercent = covid_count /10 * 100;
 		var coldPercent = cold_count /10 * 100;
 		var fluPercent = flu_count /10 * 100;
 		var allergyPercent = allergy_count /10 * 100;
 		var allData = [covidPercent, coldPercent, fluPercent, allergyPercent];
 		console.log(allData);
-		  
-		window.onload = function(){  
+		var resultText = document.getElementById('results');
+		resultText.innerHTML = "Probability is it COVID-19 = " + covidPercent + "<br> Probability it is a cold = " +coldPercent + "<br> Probability it is the flu = " +fluPercent + "<br> Probability it is allergies = " + allergyPercent;
+	  };
+//This function will draw rectangles on my canvas.
+	window.onload = function(){  
 		var canvas = document.getElementById("a");
 		var context = canvas.getContext("2d");
-		var percents = [covidPercent, coldPercent, fluPercent, allergyPercent];
+		var percents = allData;
 		console.log(percents);
 		var width = 50;
 		var currX = 50;
