@@ -55,11 +55,11 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	  
 //This function uses the counts from above and divides by 10 to find the probability that the user has one of the illnesses. The results will be shown through the innerHTML command. The code will know to express our results when it sees id="results" because we told it to recognize "results".
 	function ResultPercentage(){
-		var covidPercent = covid_count /10 * 100 +"%";
-		var coldPercent = cold_count /10 * 100 +"%";
-		var fluPercent = flu_count /10 * 100 +"%";
-		var allergyPercent = allergy_count /10 * 100 +"%";
-		var allData = [covid_count, cold_count, flu_count, allergy_count];
+		var covidPercent = covid_count /10 * 100;
+		var coldPercent = cold_count /10 * 100;
+		var fluPercent = flu_count /10 * 100;
+		var allergyPercent = allergy_count /10 * 100;
+		var allData = [covidPercent, coldPercent, fluPercent, allergyPercent];
 		console.log(allData)
 		var resultText= document.getElementById("results");
 		resultText.innerHTML = "Probability it is COVID-19 = " + covidPercent + "<br> Probability it is a cold = " + coldPercent + "<br> Probability it is the flu = " +fluPercent + "<br> Probability it is allergies = " + allergyPercent;
