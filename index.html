@@ -62,6 +62,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		var resultText= document.getElementById("results");
 		resultText.innerHTML = "Probability it is COVID-19 = " + covidPercent + "<br> Probability it is a cold = " + coldPercent + "<br> Probability it is the flu = " +fluPercent + "<br> Probability it is allergies = " + allergyPercent;
 	}
+
 	
 
   </script>
@@ -285,33 +286,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		<!--This triggers our innerHTML command from earlier. The sums of anemia and hypothyroidism symptoms will be divided by six to calculate the probability that the user has one of those disorders.-->
 		<p id="results">
 		</p>
-<script type="text/javascript">
-window.onload = function () {
-
-var chart = new CanvasJS.Chart("chartContainer", {
-	theme: "light1", // "light2", "dark1", "dark2"
-	animationEnabled: false, // change to true		
-	title:{
-		text: "Basic Column Chart"
-	},
-	data: [
-	{
-		// Change type to "bar", "area", "spline", "pie",etc.
-		type: "column",
-		dataPoints: [
-			{ label: "apple",  y: 10  },
-			{ label: "orange", y: 15  },
-			{ label: "banana", y: 25  },
-			{ label: "mango",  y: 30  },
-			{ label: "grape",  y: 28  }
-		]
-	}
-	]
-});
-chart.render();
-
-}
-</script>
+	<canvas id="a" width="500" height="330" style="border:1px solid #000000;"></canvas> 
 	</div>
 </div>
 		
