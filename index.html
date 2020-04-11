@@ -59,18 +59,19 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		var coldPercent = cold_count /10 * 100;
 		var fluPercent = flu_count /10 * 100;
 		var allergyPercent = allergy_count /10 * 100;
-		const allData = [covidPercent, coldPercent, fluPercent, allergyPercent];
-		console.log(allData);
+		//const allData = [covidPercent, coldPercent, fluPercent, allergyPercent];
+		//console.log(allData);
 		var resultText = document.getElementById('results');
 		resultText.innerHTML = "Probability is it COVID-19 = " + covidPercent + "<br> Probability it is a cold = " +coldPercent + "<br> Probability it is the flu = " +fluPercent + "<br> Probability it is allergies = " + allergyPercent;
 	  };
-	  const myData = allData;
-	  console.log(myData);
+
 //This function will draw rectangles on my canvas.
 	window.onload = function(){  
 		var canvas = document.getElementById("a");
 		var context = canvas.getContext("2d");
-		var percents = myData
+		const allData = [covidPercent, coldPercent, fluPercent, allergyPercent];
+		console.log(allData);
+		var percents = allData
 		console.log(percents);
 		var width = 50;
 		var currX = 50;
