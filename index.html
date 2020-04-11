@@ -65,7 +65,11 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		//var resultText = document.getElementById('results');
 		//resultText.innerHTML = "Probability is it COVID-19 = " + covidPercent + "<br> Probability it is a cold = " +coldPercent + "<br> Probability it is the flu = " +fluPercent + "<br> Probability it is allergies = " + allergyPercent;
 	  };
-
+	function getArray(){
+		var myArray = ResultArray();
+		console.log(myArray);
+	}
+	  
 //This function will draw rectangles on my canvas.
 	window.onload = function(){  
 		var canvas = document.getElementById("a");
