@@ -70,8 +70,24 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		resultText.innerHTML = "Probability is it COVID-19 = " + covidPercent + "<br> Probability it is a cold = " +coldPercent + "<br> Probability it is the flu = " +fluPercent + "<br> Probability it is allergies = " + allergyPercent;
 	};
 	  
+      
+function displayCanvas(){
+    var canvas = document.getElementById("a");
+     var context = canvas.getContext("2d"); 
+        var percents = ResultArray(); 
+        console.log(percents);
+        var width = 50;
+        var currX = 50;
+        context.fillStyle = 'red';
+        var i;
+        for (i = 0; i< percents.length; i++){
+            var h = percents[i];
+            context.fillRect (currX, canvas.height - h, width, h);
+            currX += width + 50;
+        };
+}	  
 	  
-/*This function will draw rectangles on my canvas. It will draw rectangles if I manually give it the heights I want with the "percents" var but I couldn't link it to the actual results.
+//This function will draw rectangles on my canvas. It will draw rectangles if I manually give it the heights I want with the "percents" var but I couldn't link it to the actual results.
 	window.onload = function(){  
 		var canvas = document.getElementById("a"); //"a" is the id of the canvas I created on page 12 of my app.
 		var context = canvas.getContext("2d"); //the canvas is in 2d
@@ -88,7 +104,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 			currX += width + 50; //each rectangle starts at the x-coordinate 50 pixels over from the last one.
 		};
 		};
-*/
+
   </script>
 
 
@@ -296,7 +312,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<div id="content" class="w3-container">
 		<p>You're almost done!</p>
 	<!--This button's function is to calculate the probability of each illness. It will lead the user to the twelth and final page.-->
-	<a href="#twelve" onclick="ResultArray();" class="w3-btn w3-black">Click here to view your results.</a>
+	<a href="#twelve" onclick="displayCanvas();" class="w3-btn w3-black">Click here to view your results.</a>
 	</div>
 </div>
 <!--This is the results page!-->
