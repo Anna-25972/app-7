@@ -19,6 +19,9 @@ triedel@utexas.edu
 Brief Description of Goal of Code:
 This is to help the user learn if they have COVID-19, a cold, the flu, or allergies.
 
+Known Issues:
+I was trying to make a bar graph on the results page but I couldn't figure out how to get the survey results in the graph. I have commented all of this out and am just showing the results the old way.
+
 -->
 	
    <head> 
@@ -28,6 +31,7 @@ This is to help the user learn if they have COVID-19, a cold, the flu, or allerg
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
+	
 <!--This part is in JavaScript. JavaSript is affected by an event and then changes another part of our website.-->
   <script>
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
@@ -59,29 +63,29 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		var coldPercent = cold_count /10 * 100 + "%";
 		var fluPercent = flu_count /10 * 100 + "%";
 		var allergyPercent = allergy_count /10 * 100 + "%";
-		//const allData = [covidPercent, coldPercent, fluPercent, allergyPercent];
-		//console.log(allData);
-		//return allData;
+		//const allData = [covidPercent, coldPercent, fluPercent, allergyPercent]; I made this array to store in my drawRectangle function but I couldn't figure out how to make it work.
+		//console.log(allData); this array was logged in the console right so I know the array is right but it didn't work in the draw rectangle function
+		//return allData; I thought this would help in the function below but it didn't
 		var resultText = document.getElementById('results');
 		resultText.innerHTML = "Probability is it COVID-19 = " + covidPercent + "<br> Probability it is a cold = " +coldPercent + "<br> Probability it is the flu = " +fluPercent + "<br> Probability it is allergies = " + allergyPercent;
 	};
 	  
 	  
-/*This function will draw rectangles on my canvas.
+/*This function will draw rectangles on my canvas. It will draw rectangles if I manually give it the heights I want with the "percents" var but I couldn't link it to the actual results.
 	window.onload = function(){  
-		var canvas = document.getElementById("a");
-		var context = canvas.getContext("2d");
-		var percents = this.ResultArray();
-		console.log(percents);
-		var width = 50;
-		var currX = 50;
-		context.fillStyle = 'red';
-		var i;
-		for (i = 0; i< percents.length; i++){
-			var h = percents[i];
-			console.log(h);
-			context.fillRect (currX, canvas.height - h, width, h);
-			currX += width + 50;
+		var canvas = document.getElementById("a"); //"a" is the id of the canvas I created on page 12 of my app.
+		var context = canvas.getContext("2d"); //the canvas is in 2d
+		var percents = this.ResultArray(); //this is the part I couldn't figure out. If I type an array here the whole function will work and rectangles will show up on my canvas. But I couldn't get the allData array to work here.
+		console.log(percents); //this showed me that the percents var was pulling all of the variables within the ResultArray function, but I really just needed the allData array.
+		var width = 50; //this is the width the rectangles would be
+		var currX = 50; //the rectangles start at x = 50 on my canvas
+		context.fillStyle = 'red'; //I made the rectangles red
+		var i; //this is so I could make make a loop that draws for each rectangle.
+		for (i = 0; i< percents.length; i++){ //this loop uses i. i starts at 0 and this loop continues as long as i is less than the number of objects in the percents array. i increases by 1 each time.
+			var h = percents[i]; // the value of i is put into the h variable that's used for the height of the rectangle
+			console.log(h); //this was to check that the loop was working
+			context.fillRect (currX, canvas.height - h, width, h); //this is the function that actually draws the rectangles. each rectangle starts at currX and the height of the canvas minus the heigh of the rectangle so that it is at the bottom of the canvas. its width is always 50 and the height comes from the h variable in the loop.
+			currX += width + 50; //each rectangle starts at the x-coordinate 50 pixels over from the last one.
 		};
 		};
 */
@@ -142,7 +146,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<!--This is question 1 and buttons to answer the question.-->
     	<div id="content" class="w3-container">
         <p>Are you coughing?</p>    
- <!-- These are the buttons to answer question one. Both buttons lead to question two. Each one adds to the anemia or hypo count. The onclick term is connected to one of the functions from earlier. Clicking a button will increase either the anemia or hypothyroidism probability.-->
+ <!-- These are the buttons to answer question one. Both buttons lead to question two. Each one adds an illness count. The onclick term is connected to one of the functions from earlier. Clicking a button will increase one or more probabilities.-->
 	<a href="#two" onclick="covidAdd();" onclick="coldAdd();" onclick="fluAdd();"class="w3-btn w3-black"> Yes </a>
 	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 	</div>
@@ -156,7 +160,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<!--This is question 2 and its buttons.-->
 	<div id="content" class="w3-container">
 		<p>Are you experiencing shortness of breath?</p>
-	 <!--These buttons answer question two. They send the user to page three. Each will add to either the anemia or hypothyroidism count.-->
+	 <!--These buttons answer question two. They send the user to page three. Each will add to the count variables.-->
 	<a href="#three" onclick="covidAdd();" class="w3-btn w3-black"> Yes </a>
 	<a href="#three" onclick="coldAdd();" onclick="fluAdd();" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 	</div>
@@ -303,10 +307,10 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	</div>
 
 	<div id="content" class="w3-container">
-		<!--This triggers our innerHTML command from earlier. The sums of anemia and hypothyroidism symptoms will be divided by six to calculate the probability that the user has one of those disorders.-->
+		<!--This triggers our innerHTML command from earlier. The sums of each illness' symptoms will be divided by six to calculate the probability that the user has one of those disorders.-->
 		<p id="results">
 		</p>
-	<!-- <canvas id="a" width="450" height="100" style="border:1px solid #000000;"></canvas> -->
+	<!-- <canvas id="a" width="450" height="100" style="border:1px solid #000000;"></canvas> --> <!-- this canvas was where my graph would have gone. the rectangle function draws onto this canvas -->
 	</div>
 </div>
 		
